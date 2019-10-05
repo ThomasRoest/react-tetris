@@ -1,9 +1,10 @@
-export const hello = () => {
-  return "hoi";
-};
+interface ITetronimo {
+  shape: (string | number)[][];
+  color: string;
+}
 
 // prettier-ignore
-export const TETROMINOS = {
+export const TETROMINOS: { [key: string]: ITetronimo } = {
   0: { shape: [[0]], color: '0.0.0' },
   I: { 
     shape: [
@@ -61,4 +62,11 @@ export const TETROMINOS = {
     ],
     color: '227, 78, 78', 
   },
+};
+
+export const randomTetromino = () => {
+  const tetrominos: string = "IJLOSTZ";
+  const randTetromino: string =
+    tetrominos[Math.floor(Math.random() * tetrominos.length)];
+  return TETROMINOS[randTetromino];
 };
