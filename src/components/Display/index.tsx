@@ -1,4 +1,5 @@
 import React from "react";
+import { StyledDisplay } from "./styles";
 
 interface IProps {
   gameOver: any;
@@ -6,7 +7,7 @@ interface IProps {
 }
 
 const Display = ({ gameOver, text }: IProps) => {
-  return <div>{text}</div>;
+  return <StyledDisplay gameOver={gameOver}>{text}</StyledDisplay>;
 };
 
 export default Display;

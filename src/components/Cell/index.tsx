@@ -7,7 +7,7 @@ interface IProps {
 }
 
 const Cell = ({ type }: IProps) => {
-  return <StyledCell type={"L"} color={TETROMINOS["L"].color} />;
+  return <StyledCell type={type} color={TETROMINOS[type].color} />;
 };
 
 export default Cell;
